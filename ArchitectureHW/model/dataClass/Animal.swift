@@ -14,11 +14,13 @@ class Animal {
     var name: String
     var shortDescription: String
     var description: String
+    var placeholderColor: UIColor
     
-    init(id: Int, name: String, shortDescription: String, description: String) {
+    init(id: Int, name: String, shortDescription: String, description: String, placeholderColor: UIColor) {
         self.id = id
         self.name = name
         self.shortDescription = shortDescription
         self.description = description
+        self.placeholderColor = placeholderColor
     }
 }
