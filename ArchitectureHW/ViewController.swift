@@ -14,5 +14,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor.yellow
+        
+        let repository = AnimalListRepository()
+        let animalList = repository.getAnimalList()
+        let animal = repository.getAnimalWithId(5)
+        
+        print("animalList.count = \(animalList.count)")
+        print("animal: id = 5 has name = \(animal.name)")
     }
 }

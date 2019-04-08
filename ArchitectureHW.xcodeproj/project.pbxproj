@@ -11,6 +11,8 @@
 		0C55F81C225AFF0F00CDCAC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C55F81B225AFF0F00CDCAC3 /* ViewController.swift */; };
 		0C55F821225AFF0F00CDCAC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C55F820225AFF0F00CDCAC3 /* Assets.xcassets */; };
 		0C55F824225AFF0F00CDCAC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C55F822225AFF0F00CDCAC3 /* LaunchScreen.storyboard */; };
+		0C55F830225BE9F000CDCAC3 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C55F82F225BE9F000CDCAC3 /* Animal.swift */; };
+		0C55F833225BEB8D00CDCAC3 /* AnimalListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C55F832225BEB8D00CDCAC3 /* AnimalListRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		0C55F820225AFF0F00CDCAC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C55F823225AFF0F00CDCAC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C55F825225AFF0F00CDCAC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C55F82F225BE9F000CDCAC3 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		0C55F832225BEB8D00CDCAC3 /* AnimalListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 		0C55F818225AFF0F00CDCAC3 /* ArchitectureHW */ = {
 			isa = PBXGroup;
 			children = (
+				0C55F82B225B200E00CDCAC3 /* model */,
 				0C55F819225AFF0F00CDCAC3 /* AppDelegate.swift */,
 				0C55F81B225AFF0F00CDCAC3 /* ViewController.swift */,
 				0C55F820225AFF0F00CDCAC3 /* Assets.xcassets */,
@@ -59,6 +64,31 @@
 				0C55F825225AFF0F00CDCAC3 /* Info.plist */,
 			);
 			path = ArchitectureHW;
+			sourceTree = "<group>";
+		};
+		0C55F82B225B200E00CDCAC3 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				0C55F831225BEB5700CDCAC3 /* repository */,
+				0C55F82E225BE9C000CDCAC3 /* dataClass */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		0C55F82E225BE9C000CDCAC3 /* dataClass */ = {
+			isa = PBXGroup;
+			children = (
+				0C55F82F225BE9F000CDCAC3 /* Animal.swift */,
+			);
+			path = dataClass;
+			sourceTree = "<group>";
+		};
+		0C55F831225BEB5700CDCAC3 /* repository */ = {
+			isa = PBXGroup;
+			children = (
+				0C55F832225BEB8D00CDCAC3 /* AnimalListRepository.swift */,
+			);
+			path = repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +161,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C55F833225BEB8D00CDCAC3 /* AnimalListRepository.swift in Sources */,
+				0C55F830225BE9F000CDCAC3 /* Animal.swift in Sources */,
 				0C55F81C225AFF0F00CDCAC3 /* ViewController.swift in Sources */,
 				0C55F81A225AFF0F00CDCAC3 /* AppDelegate.swift in Sources */,
 			);
