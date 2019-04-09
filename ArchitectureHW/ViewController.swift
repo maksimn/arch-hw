@@ -15,7 +15,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        animalListView = AnimalListView(view)
+        /// Model
+        let animalListRepository = AnimalListRepository()
+        
+        /// View
+        animalListView = AnimalListView()
+        animalListView?.view = view
+        
+        /// Presenter
+        let animalListPresenter = AnimalListPresenter(animalListView!, animalListRepository)
+        
+        animalListPresenter.showAnimalList()
     }
     
     override func viewDidLayoutSubviews() {

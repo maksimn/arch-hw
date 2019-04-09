@@ -10,9 +10,9 @@ import UIKit
 
 class AnimalListView : NSObject, UICollectionViewDataSource {
     
-    var view: UIView?
+    var view: UIView? /// == ViewController.view
 
-    fileprivate let animalDataSource = AnimalListRepository().getAnimalList()
+    var animalDataSource: [Animal]?
     
     fileprivate lazy var animalsCollectionView: UICollectionView = {
         let collectionViewLayout = UICollectionViewFlowLayout()
@@ -26,20 +26,17 @@ class AnimalListView : NSObject, UICollectionViewDataSource {
         return collectionView
     }()
     
-    init(_ view: UIView?) {
-        super.init()
-        self.view = view
-        view?.backgroundColor = UIColor.red
-        view?.addSubview(animalsCollectionView)
-    }
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return animalDataSource.count
+        return animalDataSource?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let animal = animalDataSource[indexPath.row]
+        if (animalDataSource == nil) {
+            return UICollectionViewCell()
+        }
+        
+        let animal = animalDataSource![indexPath.row]
         
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AnimalCollectionViewCell", for: indexPath) as? AnimalCollectionViewCell {
             
@@ -54,5 +51,10 @@ class AnimalListView : NSObject, UICollectionViewDataSource {
     
     func viewDidLayoutSubviews() {
         animalsCollectionView.frame = CGRect(x: 0, y: 40, width: view?.frame.width ?? 0, height: (view?.frame.height ?? 0) - 40)
+    }
+    
+    func show() {
+        view?.backgroundColor = UIColor.red
+        view?.addSubview(animalsCollectionView)
     }
 }

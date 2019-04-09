@@ -9,5 +9,17 @@
 import UIKit
 
 class AnimalListPresenter {
+    
+    weak var animalListView: AnimalListView?
+    var animalListRepository: AnimalListRepository?
 
+    init(_ animalListView: AnimalListView, _ animalListRepository: AnimalListRepository) {
+        self.animalListView = animalListView
+        self.animalListRepository = animalListRepository
+    }
+    
+    func showAnimalList() {
+        animalListView?.animalDataSource = animalListRepository?.getAnimalList()
+        animalListView?.show()
+    }
 }
