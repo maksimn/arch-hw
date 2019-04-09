@@ -15,6 +15,7 @@
 		0C55F833225BEB8D00CDCAC3 /* AnimalListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C55F832225BEB8D00CDCAC3 /* AnimalListRepository.swift */; };
 		0C55F836225C055500CDCAC3 /* AnimalListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C55F835225C055500CDCAC3 /* AnimalListPresenter.swift */; };
 		0C55F839225C0B5900CDCAC3 /* AnimalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C55F838225C0B5900CDCAC3 /* AnimalCollectionViewCell.swift */; };
+		0C55F83B225C1DF800CDCAC3 /* AnimalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C55F83A225C1DF800CDCAC3 /* AnimalListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		0C55F832225BEB8D00CDCAC3 /* AnimalListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListRepository.swift; sourceTree = "<group>"; };
 		0C55F835225C055500CDCAC3 /* AnimalListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListPresenter.swift; sourceTree = "<group>"; };
 		0C55F838225C0B5900CDCAC3 /* AnimalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCollectionViewCell.swift; sourceTree = "<group>"; };
+		0C55F83A225C1DF800CDCAC3 /* AnimalListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,9 +110,18 @@
 		0C55F837225C057100CDCAC3 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				0C55F838225C0B5900CDCAC3 /* AnimalCollectionViewCell.swift */,
+				0C55F83C225C1E1700CDCAC3 /* collection */,
+				0C55F83A225C1DF800CDCAC3 /* AnimalListView.swift */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		0C55F83C225C1E1700CDCAC3 /* collection */ = {
+			isa = PBXGroup;
+			children = (
+				0C55F838225C0B5900CDCAC3 /* AnimalCollectionViewCell.swift */,
+			);
+			path = collection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C55F83B225C1DF800CDCAC3 /* AnimalListView.swift in Sources */,
 				0C55F833225BEB8D00CDCAC3 /* AnimalListRepository.swift in Sources */,
 				0C55F830225BE9F000CDCAC3 /* Animal.swift in Sources */,
 				0C55F839225C0B5900CDCAC3 /* AnimalCollectionViewCell.swift in Sources */,
