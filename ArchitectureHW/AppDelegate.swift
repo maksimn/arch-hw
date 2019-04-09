@@ -26,8 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         animalListView.presenter = animalListPresenter
         
+        /// Navigation in application
+        let navigationController = UINavigationController(rootViewController: animalListView)
+        
         window = UIWindow()
-        window?.rootViewController = animalListView
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         
         return true

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AnimalListViewController : UIViewController, UICollectionViewDataSource, AnimalListView {
+class AnimalListViewController : UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, AnimalListView {
     
     var presenter: AnimalListPresenter?
     
@@ -20,6 +20,7 @@ class AnimalListViewController : UIViewController, UICollectionViewDataSource, A
         collectionViewLayout.minimumInteritemSpacing = 0
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: collectionViewLayout)
         collectionView.dataSource = self
+        collectionView.delegate = self
         collectionView.register(AnimalCollectionViewCell.self, forCellWithReuseIdentifier: "AnimalCollectionViewCell")
         collectionView.backgroundColor = UIColor.lightText
         
@@ -47,6 +48,14 @@ class AnimalListViewController : UIViewController, UICollectionViewDataSource, A
         }
         
         return UICollectionViewCell()
+    }
+    
+    /**
+     UICollectionViewDelegate implementation
+     */
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let animalDetailsViewController = AnimalDetailsViewController()
+        self.navigationController?.pushViewController(animalDetailsViewController, animated: true)
     }
     
     override func viewDidLoad() {
