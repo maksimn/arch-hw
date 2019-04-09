@@ -8,10 +8,10 @@
 
 import UIKit
 
-class AnimalListView : NSObject, UICollectionViewDataSource {
+class AnimalListViewController : UIViewController, UICollectionViewDataSource {
     
-    var view: UIView? /// == ViewController.view
-
+    var presenter: AnimalListPresenter?
+    
     var animalDataSource: [Animal]?
     
     fileprivate lazy var animalsCollectionView: UICollectionView = {
@@ -49,12 +49,20 @@ class AnimalListView : NSObject, UICollectionViewDataSource {
         return UICollectionViewCell()
     }
     
-    func viewDidLayoutSubviews() {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.view.backgroundColor = UIColor.red
+        presenter?.showAnimalList()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
         animalsCollectionView.frame = CGRect(x: 0, y: 40, width: view?.frame.width ?? 0, height: (view?.frame.height ?? 0) - 40)
     }
     
     func show() {
-        view?.backgroundColor = UIColor.red
-        view?.addSubview(animalsCollectionView)
+        view.addSubview(animalsCollectionView)
     }
 }

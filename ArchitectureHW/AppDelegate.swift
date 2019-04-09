@@ -15,8 +15,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        /// Model
+        let animalListRepository = AnimalListRepository()
+        
+        /// View
+        let animalListView = AnimalListViewController()
+        
+        /// Presenter
+        let animalListPresenter = AnimalListPresenter(animalListView, animalListRepository)
+        
+        animalListView.presenter = animalListPresenter
+        
         window = UIWindow()
-        window?.rootViewController = ViewController()
+        window?.rootViewController = animalListView
         window?.makeKeyAndVisible()
         
         return true

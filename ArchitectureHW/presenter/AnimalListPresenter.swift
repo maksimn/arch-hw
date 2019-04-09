@@ -10,10 +10,10 @@ import UIKit
 
 class AnimalListPresenter {
     
-    weak var animalListView: AnimalListView?
+    weak var animalListView: AnimalListViewController?
     var animalListRepository: AnimalListRepository?
 
-    init(_ animalListView: AnimalListView, _ animalListRepository: AnimalListRepository) {
+    init(_ animalListView: AnimalListViewController, _ animalListRepository: AnimalListRepository) {
         self.animalListView = animalListView
         self.animalListRepository = animalListRepository
     }
