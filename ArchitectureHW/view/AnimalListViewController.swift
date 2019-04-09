@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AnimalListViewController : UIViewController, UICollectionViewDataSource {
+class AnimalListViewController : UIViewController, UICollectionViewDataSource, AnimalListView {
     
     var presenter: AnimalListPresenter?
     
@@ -62,7 +62,8 @@ class AnimalListViewController : UIViewController, UICollectionViewDataSource {
         animalsCollectionView.frame = CGRect(x: 0, y: 40, width: view?.frame.width ?? 0, height: (view?.frame.height ?? 0) - 40)
     }
     
-    func show() {
+    func showAnimalList(_ list: [Animal]) {
+        animalDataSource = list
         view.addSubview(animalsCollectionView)
     }
 }
