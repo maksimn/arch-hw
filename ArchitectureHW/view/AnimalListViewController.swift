@@ -27,6 +27,7 @@ class AnimalListViewController : UIViewController, UICollectionViewDataSource, U
         return collectionView
     }()
     
+    /// UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return animalDataSource?.count ?? 0
     }
@@ -68,6 +69,7 @@ class AnimalListViewController : UIViewController, UICollectionViewDataSource, U
         self.navigationController?.pushViewController(animalDetailsViewController, animated: true)
     }
     
+    /// UIViewController - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -75,12 +77,14 @@ class AnimalListViewController : UIViewController, UICollectionViewDataSource, U
         presenter?.showAnimalList()
     }
     
+    /// UIViewController
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
         animalsCollectionView.frame = CGRect(x: 0, y: 40, width: view?.frame.width ?? 0, height: (view?.frame.height ?? 0) - 40)
     }
     
+    /// AnimalListView
     func showAnimalList(_ list: [Animal]) {
         animalDataSource = list
         view.addSubview(animalsCollectionView)

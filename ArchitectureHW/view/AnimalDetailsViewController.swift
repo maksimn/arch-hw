@@ -17,12 +17,14 @@ class AnimalDetailsViewController: UIViewController, AnimalDetailsView {
     let animalImage = UIView()
     let animalDescriptionLabel = UILabel()
     
+    /// UIViewController - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         presenter?.showAnimalDetails()
     }
     
+    /// AnimalDetailsView
     func showAnimalDetails(_ animal: Animal) {
         animalNameLabel.text = animal.name
         animalShortDescriptionLabel.text = animal.shortDescription
