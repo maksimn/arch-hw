@@ -61,7 +61,7 @@ class AnimalListViewController : UIViewController, UICollectionViewDataSource, U
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.red
+        self.view.backgroundColor = UIColor.black
         presenter?.showAnimalList()
     }
     

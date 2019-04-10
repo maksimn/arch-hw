@@ -17,9 +17,7 @@ class AnimalCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        let greenValue = 6.0 * 16.0 / 256.0 as CGFloat
-        self.contentView.backgroundColor = UIColor(red: 0, green: greenValue, blue: 0, alpha: 1.0)
-        
+        self.contentView.backgroundColor = Values.animalViewBackgroundColor
         animalNameLabel.textColor = UIColor.white
         animalNameLabel.font = UIFont.boldSystemFont(ofSize: 18.0)
         addSubview(animalNameLabel)

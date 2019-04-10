@@ -18,7 +18,7 @@ class AnimalDetailsViewController: UIViewController {
         someLabel.frame = CGRect(x: 50, y: 100, width: 200, height: 20)
         someLabel.text = "Детали Животного"
         someLabel.textColor = UIColor.white
-        view.backgroundColor = UIColor.darkGray
+        view.backgroundColor = Values.animalViewBackgroundColor
         
         view.addSubview(someLabel)
     }

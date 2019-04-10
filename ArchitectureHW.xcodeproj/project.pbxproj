@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C4DC2B5225D50490001D84D /* AnimalDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DC2B4225D50490001D84D /* AnimalDetailsViewController.swift */; };
+		0C4DC2B7225D8DBD0001D84D /* Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DC2B6225D8DBD0001D84D /* Values.swift */; };
 		0C55F81A225AFF0F00CDCAC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C55F819225AFF0F00CDCAC3 /* AppDelegate.swift */; };
 		0C55F821225AFF0F00CDCAC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C55F820225AFF0F00CDCAC3 /* Assets.xcassets */; };
 		0C55F824225AFF0F00CDCAC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C55F822225AFF0F00CDCAC3 /* LaunchScreen.storyboard */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		0C4DC2B4225D50490001D84D /* AnimalDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailsViewController.swift; sourceTree = "<group>"; };
+		0C4DC2B6225D8DBD0001D84D /* Values.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Values.swift; sourceTree = "<group>"; };
 		0C55F816225AFF0F00CDCAC3 /* ArchitectureHW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArchitectureHW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C55F819225AFF0F00CDCAC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C55F820225AFF0F00CDCAC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				0C55F820225AFF0F00CDCAC3 /* Assets.xcassets */,
 				0C55F822225AFF0F00CDCAC3 /* LaunchScreen.storyboard */,
 				0C55F825225AFF0F00CDCAC3 /* Info.plist */,
+				0C4DC2B6225D8DBD0001D84D /* Values.swift */,
 			);
 			path = ArchitectureHW;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C5FED34225C81F10058B28B /* AnimalListView.swift in Sources */,
+				0C4DC2B7225D8DBD0001D84D /* Values.swift in Sources */,
 				0C4DC2B5225D50490001D84D /* AnimalDetailsViewController.swift in Sources */,
 				0C55F83B225C1DF800CDCAC3 /* AnimalListViewController.swift in Sources */,
 				0C55F833225BEB8D00CDCAC3 /* AnimalListRepository.swift in Sources */,
