@@ -8,15 +8,21 @@
 
 import UIKit
 
-class AnimalDetailsViewController: UIViewController {
-
+class AnimalDetailsViewController: UIViewController, AnimalDetailsView {
+    
+    var presenter: AnimalDetailsPresenter?
+    
     let someLabel = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        presenter?.showAnimalDetails()
+    }
+    
+    func showAnimalDetails(_ animal: Animal) {
         someLabel.frame = CGRect(x: 50, y: 100, width: 200, height: 20)
-        someLabel.text = "Детали Животного"
+        someLabel.text = animal.name
         someLabel.textColor = UIColor.white
         view.backgroundColor = Values.animalViewBackgroundColor
         

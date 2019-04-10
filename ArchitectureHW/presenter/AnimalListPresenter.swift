@@ -10,8 +10,8 @@ import UIKit
 
 class AnimalListPresenter {
     
-    unowned var animalListView: AnimalListView
-    var animalListRepository: AnimalListRepository?
+    private unowned var animalListView: AnimalListView
+    private var animalListRepository: AnimalListRepository?
 
     init(_ animalListView: AnimalListView, _ animalListRepository: AnimalListRepository) {
         self.animalListView = animalListView

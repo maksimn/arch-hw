@@ -50,11 +50,21 @@ class AnimalListViewController : UIViewController, UICollectionViewDataSource, U
         return UICollectionViewCell()
     }
     
-    /**
-     UICollectionViewDelegate implementation
-     */
+    /// UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        /// Model
+        let animalListRepository = AnimalListRepository()
+        let animal = animalListRepository.getAnimalWithId(indexPath.row + 1)
+        
+        /// View
         let animalDetailsViewController = AnimalDetailsViewController()
+        
+        /// Presenter
+        let animalDetailsPresenter = AnimalDetailsPresenter(animalDetailsViewController, animal)
+        
+        animalDetailsViewController.presenter = animalDetailsPresenter
+        
         self.navigationController?.pushViewController(animalDetailsViewController, animated: true)
     }
     
