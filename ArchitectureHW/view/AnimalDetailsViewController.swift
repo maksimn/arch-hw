@@ -15,6 +15,7 @@ class AnimalDetailsViewController: UIViewController, AnimalDetailsView {
     let animalNameLabel = UILabel()
     let animalShortDescriptionLabel = UILabel()
     let animalImage = UIView()
+    let animalDescriptionLabel = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,7 @@ class AnimalDetailsViewController: UIViewController, AnimalDetailsView {
         animalNameLabel.text = animal.name
         animalShortDescriptionLabel.text = animal.shortDescription
         animalImage.backgroundColor = animal.placeholderColor
+        animalDescriptionLabel.text = animal.description
         
         let fullSize = self.view.frame.size
         let fullWidth = fullSize.width
@@ -35,6 +37,7 @@ class AnimalDetailsViewController: UIViewController, AnimalDetailsView {
         animalNameLabel.frame = CGRect(x: 14, y: 6 + fullHeight, width: labelWidth, height: 18)
         animalShortDescriptionLabel.frame = CGRect(x: 14, y: fullHeight + 20, width: labelWidth, height: 50)
         animalImage.frame = CGRect(x: 10, y: 75, width: labelWidth - 8, height: fullHeight - 84)
+        animalDescriptionLabel.frame = CGRect(x: 10, y: fullHeight + 66, width: labelWidth, height: 300)
         
         view.backgroundColor = Values.animalViewBackgroundColor
         animalNameLabel.textColor = UIColor.white
@@ -44,6 +47,11 @@ class AnimalDetailsViewController: UIViewController, AnimalDetailsView {
         animalShortDescriptionLabel.textColor = UIColor.white
         animalShortDescriptionLabel.numberOfLines = 0
         view.addSubview(animalShortDescriptionLabel)
+        
+        animalDescriptionLabel.textColor = UIColor.white
+        animalDescriptionLabel.numberOfLines = 0
+        animalDescriptionLabel.sizeToFit()
+        view.addSubview(animalDescriptionLabel)
         
         view.addSubview(animalImage)
     }
