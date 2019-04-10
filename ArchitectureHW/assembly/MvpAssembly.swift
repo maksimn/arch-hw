@@ -16,7 +16,17 @@ class MvpAssembly {
         let animalListRepository = AnimalListRepository()
         
         /// View
+        let animalListCollectionViewDataSource = AnimalListCollectionViewDataSource()
+        let animalListCollectionViewDelegate = AnimalListCollectionViewDelegate()
+        
+        let animalCollectionView = AnimalCollectionView.create()
+        animalCollectionView.dataSource = animalListCollectionViewDataSource
+        animalCollectionView.delegate = animalListCollectionViewDelegate
+        
         let animalListView = AnimalListViewController()
+        animalListView.animalListCollectionView = animalCollectionView
+        animalListView.animalListCollectionViewDataSource = animalListCollectionViewDataSource
+        animalListView.animalListCollectionViewDelegate = animalListCollectionViewDelegate
         
         /// Presenter
         let animalListPresenter = AnimalListPresenter(animalListView, animalListRepository)
