@@ -15,19 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        /// Model
-        let animalListRepository = AnimalListRepository()
-        
-        /// View
-        let animalListView = AnimalListViewController()
-        
-        /// Presenter
-        let animalListPresenter = AnimalListPresenter(animalListView, animalListRepository)
-        
-        animalListView.presenter = animalListPresenter
-        
-        /// Navigation in application
-        let navigationController = UINavigationController(rootViewController: animalListView)
+        let animalListViewController = MvpAssembly.assembleAnimalList()
+        let navigationController = UINavigationController(rootViewController: animalListViewController)
         
         window = UIWindow()
         window?.rootViewController = navigationController

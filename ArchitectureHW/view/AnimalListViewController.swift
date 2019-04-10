@@ -8,72 +8,34 @@
 
 import UIKit
 
-class AnimalListViewController : UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, AnimalListView {
+class AnimalListViewController : UIViewController, AnimalListView {
     
     var presenter: AnimalListPresenter?
     
-    var animalDataSource: [Animal]?
+    let animalListCollectionViewDataSource = AnimalListCollectionViewDataSource()
+    let animalListCollectionViewDelegate = AnimalListCollectionViewDelegate()
     
     fileprivate lazy var animalsCollectionView: UICollectionView = {
         let collectionViewLayout = UICollectionViewFlowLayout()
         collectionViewLayout.itemSize = CGSize(width: 370, height: 275)
         collectionViewLayout.minimumInteritemSpacing = 0
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: collectionViewLayout)
-        collectionView.dataSource = self
-        collectionView.delegate = self
+        collectionView.dataSource = animalListCollectionViewDataSource
+        collectionView.delegate = animalListCollectionViewDelegate
         collectionView.register(AnimalCollectionViewCell.self, forCellWithReuseIdentifier: "AnimalCollectionViewCell")
         collectionView.backgroundColor = UIColor.lightText
         
         return collectionView
     }()
     
-    /// UICollectionViewDataSource
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return animalDataSource?.count ?? 0
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        if (animalDataSource == nil) {
-            return UICollectionViewCell()
-        }
-        
-        let animal = animalDataSource![indexPath.row]
-        
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AnimalCollectionViewCell", for: indexPath) as? AnimalCollectionViewCell {
-            
-            cell.animalNameLabel.text = animal.name
-            cell.animalShortDescriptionLabel.text = animal.shortDescription
-            cell.animalImage.backgroundColor = animal.placeholderColor
-            return cell
-        }
-        
-        return UICollectionViewCell()
-    }
-    
-    /// UICollectionViewDelegate
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        /// Model
-        let animalListRepository = AnimalListRepository()
-        let animal = animalListRepository.getAnimalWithId(indexPath.row + 1)
-        
-        /// View
-        let animalDetailsViewController = AnimalDetailsViewController()
-        
-        /// Presenter
-        let animalDetailsPresenter = AnimalDetailsPresenter(animalDetailsViewController, animal)
-        
-        animalDetailsViewController.presenter = animalDetailsPresenter
-        
-        self.navigationController?.pushViewController(animalDetailsViewController, animated: true)
-    }
-    
     /// UIViewController - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.black
+        view.backgroundColor = UIColor.black
+        
+        animalListCollectionViewDelegate.navigationController = navigationController
+        
         presenter?.showAnimalList()
     }
     
@@ -86,7 +48,7 @@ class AnimalListViewController : UIViewController, UICollectionViewDataSource, U
     
     /// AnimalListView
     func showAnimalList(_ list: [Animal]) {
-        animalDataSource = list
+        animalListCollectionViewDataSource.animalDataSource = list
         view.addSubview(animalsCollectionView)
     }
 }

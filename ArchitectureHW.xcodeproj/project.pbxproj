@@ -11,6 +11,9 @@
 		0C4DC2B7225D8DBD0001D84D /* Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DC2B6225D8DBD0001D84D /* Values.swift */; };
 		0C4DC2B9225D94BF0001D84D /* AnimalDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DC2B8225D94BF0001D84D /* AnimalDetailsPresenter.swift */; };
 		0C4DC2BB225D94F80001D84D /* AnimalDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DC2BA225D94F80001D84D /* AnimalDetailsView.swift */; };
+		0C4DC2BD225E90AE0001D84D /* AnimalListCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DC2BC225E90AE0001D84D /* AnimalListCollectionViewDataSource.swift */; };
+		0C4DC2BF225E91840001D84D /* AnimalListCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DC2BE225E91840001D84D /* AnimalListCollectionViewDelegate.swift */; };
+		0C4DC2C4225E9E400001D84D /* MvpAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DC2C3225E9E400001D84D /* MvpAssembly.swift */; };
 		0C55F81A225AFF0F00CDCAC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C55F819225AFF0F00CDCAC3 /* AppDelegate.swift */; };
 		0C55F821225AFF0F00CDCAC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C55F820225AFF0F00CDCAC3 /* Assets.xcassets */; };
 		0C55F824225AFF0F00CDCAC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C55F822225AFF0F00CDCAC3 /* LaunchScreen.storyboard */; };
@@ -27,6 +30,9 @@
 		0C4DC2B6225D8DBD0001D84D /* Values.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Values.swift; sourceTree = "<group>"; };
 		0C4DC2B8225D94BF0001D84D /* AnimalDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailsPresenter.swift; sourceTree = "<group>"; };
 		0C4DC2BA225D94F80001D84D /* AnimalDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailsView.swift; sourceTree = "<group>"; };
+		0C4DC2BC225E90AE0001D84D /* AnimalListCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		0C4DC2BE225E91840001D84D /* AnimalListCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		0C4DC2C3225E9E400001D84D /* MvpAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MvpAssembly.swift; sourceTree = "<group>"; };
 		0C55F816225AFF0F00CDCAC3 /* ArchitectureHW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArchitectureHW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C55F819225AFF0F00CDCAC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C55F820225AFF0F00CDCAC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C4DC2C2225E9E1C0001D84D /* assembly */ = {
+			isa = PBXGroup;
+			children = (
+				0C4DC2C3225E9E400001D84D /* MvpAssembly.swift */,
+			);
+			path = assembly;
+			sourceTree = "<group>";
+		};
 		0C55F80D225AFF0F00CDCAC3 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +84,7 @@
 		0C55F818225AFF0F00CDCAC3 /* ArchitectureHW */ = {
 			isa = PBXGroup;
 			children = (
+				0C4DC2C2225E9E1C0001D84D /* assembly */,
 				0C55F837225C057100CDCAC3 /* view */,
 				0C55F834225C053400CDCAC3 /* presenter */,
 				0C55F82B225B200E00CDCAC3 /* model */,
@@ -132,6 +147,8 @@
 			isa = PBXGroup;
 			children = (
 				0C55F838225C0B5900CDCAC3 /* AnimalCollectionViewCell.swift */,
+				0C4DC2BC225E90AE0001D84D /* AnimalListCollectionViewDataSource.swift */,
+				0C4DC2BE225E91840001D84D /* AnimalListCollectionViewDelegate.swift */,
 			);
 			path = collection;
 			sourceTree = "<group>";
@@ -207,12 +224,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C5FED34225C81F10058B28B /* AnimalListView.swift in Sources */,
+				0C4DC2C4225E9E400001D84D /* MvpAssembly.swift in Sources */,
 				0C4DC2B7225D8DBD0001D84D /* Values.swift in Sources */,
 				0C4DC2B5225D50490001D84D /* AnimalDetailsViewController.swift in Sources */,
 				0C55F83B225C1DF800CDCAC3 /* AnimalListViewController.swift in Sources */,
 				0C55F833225BEB8D00CDCAC3 /* AnimalListRepository.swift in Sources */,
 				0C4DC2B9225D94BF0001D84D /* AnimalDetailsPresenter.swift in Sources */,
+				0C4DC2BF225E91840001D84D /* AnimalListCollectionViewDelegate.swift in Sources */,
 				0C4DC2BB225D94F80001D84D /* AnimalDetailsView.swift in Sources */,
+				0C4DC2BD225E90AE0001D84D /* AnimalListCollectionViewDataSource.swift in Sources */,
 				0C55F830225BE9F000CDCAC3 /* Animal.swift in Sources */,
 				0C55F839225C0B5900CDCAC3 /* AnimalCollectionViewCell.swift in Sources */,
 				0C55F836225C055500CDCAC3 /* AnimalListPresenter.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Animal {
+struct Animal {
     
     var id: Int
     var name: String
