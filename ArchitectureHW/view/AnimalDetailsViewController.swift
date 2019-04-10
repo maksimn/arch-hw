@@ -34,10 +34,10 @@ class AnimalDetailsViewController: UIViewController, AnimalDetailsView {
         let fullWidth = self.view.frame.size.width
         let fullHeight = fullWidth * 0.75
         let labelWidth = fullWidth - 12.0
-        animalNameLabel.frame = CGRect(x: 14, y: 6 + fullHeight, width: labelWidth, height: 18)
-        animalShortDescriptionLabel.frame = CGRect(x: 14, y: fullHeight + 20, width: labelWidth, height: 50)
-        animalImage.frame = CGRect(x: 10, y: 75, width: labelWidth - 8, height: fullHeight - 84)
-        animalDescriptionLabel.frame = CGRect(x: 10, y: fullHeight + 66, width: labelWidth, height: 300)
+        animalNameLabel.frame = CGRect(x: 14, y: 24 + fullHeight, width: labelWidth, height: 18)
+        animalShortDescriptionLabel.frame = CGRect(x: 14, y: fullHeight + 37, width: labelWidth, height: 50)
+        animalImage.frame = CGRect(x: 10, y: 100, width: labelWidth - 8, height: fullHeight - 84)
+        animalDescriptionLabel.frame = CGRect(x: 10, y: fullHeight + 81, width: labelWidth, height: 300)
         
         view.backgroundColor = Values.animalViewBackgroundColor
         animalNameLabel.textColor = UIColor.white
