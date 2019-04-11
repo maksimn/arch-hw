@@ -15,7 +15,8 @@ class AnimalCollectionView {
         collectionViewLayout.itemSize = CGSize(width: 370, height: 275)
         collectionViewLayout.minimumInteritemSpacing = 0
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: collectionViewLayout)
-        collectionView.register(AnimalCollectionViewCell.self, forCellWithReuseIdentifier: "AnimalCollectionViewCell")
+        collectionView.register(AnimalCollectionViewCell.self,
+                                forCellWithReuseIdentifier: AnimalCollectionViewEnum.Cell.reuseId)
         collectionView.backgroundColor = UIColor.lightText
         
         return collectionView

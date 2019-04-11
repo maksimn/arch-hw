@@ -24,7 +24,7 @@ class AnimalListCollectionViewDataSource : NSObject, UICollectionViewDataSource 
         
         let animal = animalDataSource![indexPath.row]
         
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AnimalCollectionViewCell", for: indexPath) as? AnimalCollectionViewCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AnimalCollectionViewEnum.Cell.reuseId, for: indexPath) as? AnimalCollectionViewCell {
             
             cell.animalNameLabel.text = animal.name
             cell.animalShortDescriptionLabel.text = animal.shortDescription

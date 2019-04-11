@@ -15,6 +15,7 @@
 		0C4DC2BF225E91840001D84D /* AnimalListCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DC2BE225E91840001D84D /* AnimalListCollectionViewDelegate.swift */; };
 		0C4DC2C4225E9E400001D84D /* MvpAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DC2C3225E9E400001D84D /* MvpAssembly.swift */; };
 		0C4DC2C6225EAD130001D84D /* AnimalCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DC2C5225EAD130001D84D /* AnimalCollectionView.swift */; };
+		0C4DC2CA225EE89F0001D84D /* AnimalCollectionViewEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DC2C9225EE89F0001D84D /* AnimalCollectionViewEnum.swift */; };
 		0C55F81A225AFF0F00CDCAC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C55F819225AFF0F00CDCAC3 /* AppDelegate.swift */; };
 		0C55F821225AFF0F00CDCAC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C55F820225AFF0F00CDCAC3 /* Assets.xcassets */; };
 		0C55F824225AFF0F00CDCAC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C55F822225AFF0F00CDCAC3 /* LaunchScreen.storyboard */; };
@@ -35,6 +36,7 @@
 		0C4DC2BE225E91840001D84D /* AnimalListCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		0C4DC2C3225E9E400001D84D /* MvpAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MvpAssembly.swift; sourceTree = "<group>"; };
 		0C4DC2C5225EAD130001D84D /* AnimalCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCollectionView.swift; sourceTree = "<group>"; };
+		0C4DC2C9225EE89F0001D84D /* AnimalCollectionViewEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCollectionViewEnum.swift; sourceTree = "<group>"; };
 		0C55F816225AFF0F00CDCAC3 /* ArchitectureHW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArchitectureHW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C55F819225AFF0F00CDCAC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C55F820225AFF0F00CDCAC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				0C4DC2BC225E90AE0001D84D /* AnimalListCollectionViewDataSource.swift */,
 				0C4DC2BE225E91840001D84D /* AnimalListCollectionViewDelegate.swift */,
 				0C4DC2C5225EAD130001D84D /* AnimalCollectionView.swift */,
+				0C4DC2C9225EE89F0001D84D /* AnimalCollectionViewEnum.swift */,
 			);
 			path = collection;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				0C55F83B225C1DF800CDCAC3 /* AnimalListViewController.swift in Sources */,
 				0C55F833225BEB8D00CDCAC3 /* AnimalListRepository.swift in Sources */,
 				0C4DC2B9225D94BF0001D84D /* AnimalDetailsPresenter.swift in Sources */,
+				0C4DC2CA225EE89F0001D84D /* AnimalCollectionViewEnum.swift in Sources */,
 				0C4DC2BF225E91840001D84D /* AnimalListCollectionViewDelegate.swift in Sources */,
 				0C4DC2BB225D94F80001D84D /* AnimalDetailsView.swift in Sources */,
 				0C4DC2BD225E90AE0001D84D /* AnimalListCollectionViewDataSource.swift in Sources */,
