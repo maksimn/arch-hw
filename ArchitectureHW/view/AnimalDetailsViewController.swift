@@ -21,6 +21,8 @@ class AnimalDetailsViewController: UIViewController, AnimalDetailsView {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        prepareViews()
+        
         presenter?.showAnimalDetails()
     }
     
@@ -29,15 +31,17 @@ class AnimalDetailsViewController: UIViewController, AnimalDetailsView {
         animalNameLabel.text = animal.name
         animalShortDescriptionLabel.text = animal.shortDescription
         animalImage.backgroundColor = animal.placeholderColor
-        animalDescriptionLabel.text = animal.description
-        
+        animalDescriptionLabel.text = animal.description;
+        setupAnimalDescriptionLabelFrame()
+    }
+    
+    func prepareViews() {
         let fullWidth = self.view.frame.size.width
         let fullHeight = fullWidth * 0.75
         let labelWidth = fullWidth - 12.0
         animalNameLabel.frame = CGRect(x: 14, y: 24 + fullHeight, width: labelWidth, height: 18)
         animalShortDescriptionLabel.frame = CGRect(x: 14, y: fullHeight + 37, width: labelWidth, height: 50)
         animalImage.frame = CGRect(x: 10, y: 100, width: labelWidth - 8, height: fullHeight - 84)
-        animalDescriptionLabel.frame = CGRect(x: 10, y: fullHeight + 81, width: labelWidth, height: 300)
         
         view.backgroundColor = Values.animalViewBackgroundColor
         animalNameLabel.textColor = UIColor.white
@@ -54,5 +58,13 @@ class AnimalDetailsViewController: UIViewController, AnimalDetailsView {
         view.addSubview(animalDescriptionLabel)
         
         view.addSubview(animalImage)
+    }
+    
+    func setupAnimalDescriptionLabelFrame() {
+        let fullWidth = self.view.frame.size.width
+        let fullHeight = fullWidth * 0.75
+        let labelWidth = fullWidth - 12.0
+        animalDescriptionLabel.frame = CGRect(x: 10, y: fullHeight + 81, width: labelWidth, height: 300)
+        animalDescriptionLabel.sizeToFit()
     }
 }
