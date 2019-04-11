@@ -19,8 +19,9 @@ class AnimalListViewController : UIViewController, AnimalListView {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /// Navigation
-        animalListCollectionViewDelegate?.navigationController = navigationController
+        prepareCollectionView()
+        
+        animalListCollectionViewDelegate?.navigationController = navigationController /**< Navigation */
         
         view.backgroundColor = UIColor.black
         presenter?.showAnimalList()
@@ -30,6 +31,12 @@ class AnimalListViewController : UIViewController, AnimalListView {
         super.viewDidLayoutSubviews()
         
         animalListCollectionView?.frame = CGRect(x: 0, y: 40, width: view?.frame.width ?? 0, height: (view?.frame.height ?? 0) - 40)
+    }
+    
+    private func prepareCollectionView() {
+        animalListCollectionView = AnimalCollectionView.create()
+        animalListCollectionView?.dataSource = animalListCollectionViewDataSource
+        animalListCollectionView?.delegate = animalListCollectionViewDelegate
     }
     
     /// AnimalListView protocol method
